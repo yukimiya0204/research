@@ -55,6 +55,7 @@ def classify_video(args): # このプログラムの中心　
 	detected_frames = {name: 0 for name in class_names} #検出できたコマ数
 	sampled_frames = 0              #調べたコマ数
 	frame_index = 0                 #現在何コマ目か
+	
 	predict_options = {"conf": args.conf, "imgsz": args.imgsz, "verbose": False}
 	if args.device:
 		predict_options["device"] = args.device
